@@ -43,27 +43,6 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable"
-        ],
-        "consequent": "Ail",
-        "support": 0.076118,
-        "confidence": 0.084573,
-        "lift": 1.000557,
-        "antecedents_info": [
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Garlic",
-            "Category": "Fruits et légumes",
-            "Price": 1.49
-        }
-    },
-    {
-        "antecedents": [
             "Ail"
         ],
         "consequent": "Sac réutilisable",
@@ -80,6 +59,27 @@
         "consequent_info": {
             "Item_EN": "Reusable bag",
             "Category": "Maison",
+            "Price": 1.49
+        }
+    },
+    {
+        "antecedents": [
+            "Sac réutilisable"
+        ],
+        "consequent": "Ail",
+        "support": 0.076118,
+        "confidence": 0.084573,
+        "lift": 1.000557,
+        "antecedents_info": [
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Garlic",
+            "Category": "Fruits et légumes",
             "Price": 1.49
         }
     },
@@ -421,27 +421,6 @@
     },
     {
         "antecedents": [
-            "Café moulu"
-        ],
-        "consequent": "Jus d'orange",
-        "support": 0.054901,
-        "confidence": 0.436113,
-        "lift": 6.345497,
-        "antecedents_info": [
-            {
-                "Item_EN": "Ground coffee",
-                "Category": "Boissons",
-                "Price": 11.99
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Orange juice",
-            "Category": "Boissons",
-            "Price": 4.99
-        }
-    },
-    {
-        "antecedents": [
             "Jus d'orange"
         ],
         "consequent": "Café moulu",
@@ -459,6 +438,27 @@
             "Item_EN": "Ground coffee",
             "Category": "Boissons",
             "Price": 11.99
+        }
+    },
+    {
+        "antecedents": [
+            "Café moulu"
+        ],
+        "consequent": "Jus d'orange",
+        "support": 0.054901,
+        "confidence": 0.436113,
+        "lift": 6.345497,
+        "antecedents_info": [
+            {
+                "Item_EN": "Ground coffee",
+                "Category": "Boissons",
+                "Price": 11.99
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Orange juice",
+            "Category": "Boissons",
+            "Price": 4.99
         }
     },
     {
@@ -589,27 +589,6 @@
     },
     {
         "antecedents": [
-            "Champignons"
-        ],
-        "consequent": "Sac réutilisable",
-        "support": 0.050587,
-        "confidence": 0.900958,
-        "lift": 1.001036,
-        "antecedents_info": [
-            {
-                "Item_EN": "Mushrooms",
-                "Category": "Fruits et légumes",
-                "Price": 3.99
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Reusable bag",
-            "Category": "Maison",
-            "Price": 1.49
-        }
-    },
-    {
-        "antecedents": [
             "Sac réutilisable"
         ],
         "consequent": "Champignons",
@@ -627,6 +606,27 @@
             "Item_EN": "Mushrooms",
             "Category": "Fruits et légumes",
             "Price": 3.99
+        }
+    },
+    {
+        "antecedents": [
+            "Champignons"
+        ],
+        "consequent": "Sac réutilisable",
+        "support": 0.050587,
+        "confidence": 0.900958,
+        "lift": 1.001036,
+        "antecedents_info": [
+            {
+                "Item_EN": "Mushrooms",
+                "Category": "Fruits et légumes",
+                "Price": 3.99
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Reusable bag",
+            "Category": "Maison",
+            "Price": 1.49
         }
     },
     {
@@ -757,27 +757,6 @@
     },
     {
         "antecedents": [
-            "Sauce BBQ"
-        ],
-        "consequent": "Charbon de bois",
-        "support": 0.062042,
-        "confidence": 0.821444,
-        "lift": 5.844037,
-        "antecedents_info": [
-            {
-                "Item_EN": "BBQ sauce",
-                "Category": "Épicerie",
-                "Price": 4.19
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Charcoal",
-            "Category": "Épicerie",
-            "Price": 11.99
-        }
-    },
-    {
-        "antecedents": [
             "Charbon de bois"
         ],
         "consequent": "Sauce BBQ",
@@ -795,6 +774,27 @@
             "Item_EN": "BBQ sauce",
             "Category": "Épicerie",
             "Price": 4.19
+        }
+    },
+    {
+        "antecedents": [
+            "Sauce BBQ"
+        ],
+        "consequent": "Charbon de bois",
+        "support": 0.062042,
+        "confidence": 0.821444,
+        "lift": 5.844037,
+        "antecedents_info": [
+            {
+                "Item_EN": "BBQ sauce",
+                "Category": "Épicerie",
+                "Price": 4.19
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Charcoal",
+            "Category": "Épicerie",
+            "Price": 11.99
         }
     },
     {
@@ -841,27 +841,6 @@
     },
     {
         "antecedents": [
-            "Steak de boeuf"
-        ],
-        "consequent": "Charbon de bois",
-        "support": 0.092118,
-        "confidence": 0.873223,
-        "lift": 6.21241,
-        "antecedents_info": [
-            {
-                "Item_EN": "Beef steak",
-                "Category": "Viandes",
-                "Price": 18.99
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Charcoal",
-            "Category": "Épicerie",
-            "Price": 11.99
-        }
-    },
-    {
-        "antecedents": [
             "Charbon de bois"
         ],
         "consequent": "Steak de boeuf",
@@ -883,23 +862,23 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable"
+            "Steak de boeuf"
         ],
-        "consequent": "Cidre de glace",
-        "support": 0.05252,
-        "confidence": 0.058354,
-        "lift": 1.002231,
+        "consequent": "Charbon de bois",
+        "support": 0.092118,
+        "confidence": 0.873223,
+        "lift": 6.21241,
         "antecedents_info": [
             {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
+                "Item_EN": "Beef steak",
+                "Category": "Viandes",
+                "Price": 18.99
             }
         ],
         "consequent_info": {
-            "Item_EN": "Ice cider",
-            "Category": "Boissons",
-            "Price": 24.99
+            "Item_EN": "Charcoal",
+            "Category": "Épicerie",
+            "Price": 11.99
         }
     },
     {
@@ -925,23 +904,23 @@
     },
     {
         "antecedents": [
-            "Concombre"
+            "Sac réutilisable"
         ],
-        "consequent": "Laitue romaine",
-        "support": 0.0557,
-        "confidence": 0.799897,
-        "lift": 7.360786,
+        "consequent": "Cidre de glace",
+        "support": 0.05252,
+        "confidence": 0.058354,
+        "lift": 1.002231,
         "antecedents_info": [
             {
-                "Item_EN": "Cucumber",
-                "Category": "Fruits et légumes",
-                "Price": 1.99
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
             }
         ],
         "consequent_info": {
-            "Item_EN": "Romaine lettuce",
-            "Category": "Fruits et légumes",
-            "Price": 3.49
+            "Item_EN": "Ice cider",
+            "Category": "Boissons",
+            "Price": 24.99
         }
     },
     {
@@ -963,6 +942,27 @@
             "Item_EN": "Cucumber",
             "Category": "Fruits et légumes",
             "Price": 1.99
+        }
+    },
+    {
+        "antecedents": [
+            "Concombre"
+        ],
+        "consequent": "Laitue romaine",
+        "support": 0.0557,
+        "confidence": 0.799897,
+        "lift": 7.360786,
+        "antecedents_info": [
+            {
+                "Item_EN": "Cucumber",
+                "Category": "Fruits et légumes",
+                "Price": 1.99
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Romaine lettuce",
+            "Category": "Fruits et légumes",
+            "Price": 3.49
         }
     },
     {
@@ -1429,27 +1429,6 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable"
-        ],
-        "consequent": "Fromage à raclette",
-        "support": 0.061685,
-        "confidence": 0.068537,
-        "lift": 1.000422,
-        "antecedents_info": [
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Raclette cheese",
-            "Category": "Fromages",
-            "Price": 14.99
-        }
-    },
-    {
-        "antecedents": [
             "Fromage à raclette"
         ],
         "consequent": "Sac réutilisable",
@@ -1471,23 +1450,23 @@
     },
     {
         "antecedents": [
-            "Pain à hamburger"
+            "Sac réutilisable"
         ],
-        "consequent": "Ketchup",
-        "support": 0.053289,
-        "confidence": 0.527839,
-        "lift": 5.81128,
+        "consequent": "Fromage à raclette",
+        "support": 0.061685,
+        "confidence": 0.068537,
+        "lift": 1.000422,
         "antecedents_info": [
             {
-                "Item_EN": "Burger buns",
-                "Category": "Boulangerie",
-                "Price": 3.99
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
             }
         ],
         "consequent_info": {
-            "Item_EN": "Ketchup",
-            "Category": "Épicerie",
-            "Price": 3.49
+            "Item_EN": "Raclette cheese",
+            "Category": "Fromages",
+            "Price": 14.99
         }
     },
     {
@@ -1513,17 +1492,17 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable"
+            "Pain à hamburger"
         ],
         "consequent": "Ketchup",
-        "support": 0.081792,
-        "confidence": 0.090877,
-        "lift": 1.000522,
+        "support": 0.053289,
+        "confidence": 0.527839,
+        "lift": 5.81128,
         "antecedents_info": [
             {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
+                "Item_EN": "Burger buns",
+                "Category": "Boulangerie",
+                "Price": 3.99
             }
         ],
         "consequent_info": {
@@ -1555,17 +1534,17 @@
     },
     {
         "antecedents": [
-            "Steak de boeuf"
+            "Sac réutilisable"
         ],
         "consequent": "Ketchup",
-        "support": 0.055992,
-        "confidence": 0.53077,
-        "lift": 5.843555,
+        "support": 0.081792,
+        "confidence": 0.090877,
+        "lift": 1.000522,
         "antecedents_info": [
             {
-                "Item_EN": "Beef steak",
-                "Category": "Viandes",
-                "Price": 18.99
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
             }
         ],
         "consequent_info": {
@@ -1593,6 +1572,27 @@
             "Item_EN": "Beef steak",
             "Category": "Viandes",
             "Price": 18.99
+        }
+    },
+    {
+        "antecedents": [
+            "Steak de boeuf"
+        ],
+        "consequent": "Ketchup",
+        "support": 0.055992,
+        "confidence": 0.53077,
+        "lift": 5.843555,
+        "antecedents_info": [
+            {
+                "Item_EN": "Beef steak",
+                "Category": "Viandes",
+                "Price": 18.99
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Ketchup",
+            "Category": "Épicerie",
+            "Price": 3.49
         }
     },
     {
@@ -1639,27 +1639,6 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable"
-        ],
-        "consequent": "Laitue romaine",
-        "support": 0.097898,
-        "confidence": 0.108772,
-        "lift": 1.000942,
-        "antecedents_info": [
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Romaine lettuce",
-            "Category": "Fruits et légumes",
-            "Price": 3.49
-        }
-    },
-    {
-        "antecedents": [
             "Laitue romaine"
         ],
         "consequent": "Sac réutilisable",
@@ -1681,17 +1660,17 @@
     },
     {
         "antecedents": [
-            "Tomates"
+            "Sac réutilisable"
         ],
         "consequent": "Laitue romaine",
-        "support": 0.066854,
-        "confidence": 0.825827,
-        "lift": 7.599402,
+        "support": 0.097898,
+        "confidence": 0.108772,
+        "lift": 1.000942,
         "antecedents_info": [
             {
-                "Item_EN": "Tomatoes",
-                "Category": "Fruits et légumes",
-                "Price": 4.29
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
             }
         ],
         "consequent_info": {
@@ -1723,23 +1702,23 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable"
+            "Tomates"
         ],
-        "consequent": "Moutarde de Dijon",
-        "support": 0.074374,
-        "confidence": 0.082635,
-        "lift": 1.001665,
+        "consequent": "Laitue romaine",
+        "support": 0.066854,
+        "confidence": 0.825827,
+        "lift": 7.599402,
         "antecedents_info": [
             {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
+                "Item_EN": "Tomatoes",
+                "Category": "Fruits et légumes",
+                "Price": 4.29
             }
         ],
         "consequent_info": {
-            "Item_EN": "Dijon mustard",
-            "Category": "Épicerie",
-            "Price": 4.29
+            "Item_EN": "Romaine lettuce",
+            "Category": "Fruits et légumes",
+            "Price": 3.49
         }
     },
     {
@@ -1761,6 +1740,48 @@
             "Item_EN": "Reusable bag",
             "Category": "Maison",
             "Price": 1.49
+        }
+    },
+    {
+        "antecedents": [
+            "Sac réutilisable"
+        ],
+        "consequent": "Moutarde de Dijon",
+        "support": 0.074374,
+        "confidence": 0.082635,
+        "lift": 1.001665,
+        "antecedents_info": [
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Dijon mustard",
+            "Category": "Épicerie",
+            "Price": 4.29
+        }
+    },
+    {
+        "antecedents": [
+            "Sac réutilisable"
+        ],
+        "consequent": "Oeufs",
+        "support": 0.085264,
+        "confidence": 0.094735,
+        "lift": 1.00019,
+        "antecedents_info": [
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Eggs",
+            "Category": "Produits laitiers",
+            "Price": 5.29
         }
     },
     {
@@ -1788,10 +1809,10 @@
         "antecedents": [
             "Sac réutilisable"
         ],
-        "consequent": "Oeufs",
-        "support": 0.085264,
-        "confidence": 0.094735,
-        "lift": 1.00019,
+        "consequent": "Pain à hamburger",
+        "support": 0.090892,
+        "confidence": 0.100988,
+        "lift": 1.000309,
         "antecedents_info": [
             {
                 "Item_EN": "Reusable bag",
@@ -1800,9 +1821,9 @@
             }
         ],
         "consequent_info": {
-            "Item_EN": "Eggs",
-            "Category": "Produits laitiers",
-            "Price": 5.29
+            "Item_EN": "Burger buns",
+            "Category": "Boulangerie",
+            "Price": 3.99
         }
     },
     {
@@ -1824,27 +1845,6 @@
             "Item_EN": "Reusable bag",
             "Category": "Maison",
             "Price": 1.49
-        }
-    },
-    {
-        "antecedents": [
-            "Sac réutilisable"
-        ],
-        "consequent": "Pain à hamburger",
-        "support": 0.090892,
-        "confidence": 0.100988,
-        "lift": 1.000309,
-        "antecedents_info": [
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Burger buns",
-            "Category": "Boulangerie",
-            "Price": 3.99
         }
     },
     {
@@ -1891,27 +1891,6 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable"
-        ],
-        "consequent": "Papier essuie-tout",
-        "support": 0.054111,
-        "confidence": 0.060122,
-        "lift": 1.001209,
-        "antecedents_info": [
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Paper towels",
-            "Category": "Maison",
-            "Price": 8.99
-        }
-    },
-    {
-        "antecedents": [
             "Papier essuie-tout"
         ],
         "consequent": "Sac réutilisable",
@@ -1929,6 +1908,27 @@
             "Item_EN": "Reusable bag",
             "Category": "Maison",
             "Price": 1.49
+        }
+    },
+    {
+        "antecedents": [
+            "Sac réutilisable"
+        ],
+        "consequent": "Papier essuie-tout",
+        "support": 0.054111,
+        "confidence": 0.060122,
+        "lift": 1.001209,
+        "antecedents_info": [
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Paper towels",
+            "Category": "Maison",
+            "Price": 8.99
         }
     },
     {
@@ -2017,27 +2017,6 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable"
-        ],
-        "consequent": "Parmesan râpé",
-        "support": 0.082911,
-        "confidence": 0.092121,
-        "lift": 1.000605,
-        "antecedents_info": [
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Grated parmesan",
-            "Category": "Fromages",
-            "Price": 6.49
-        }
-    },
-    {
-        "antecedents": [
             "Parmesan râpé"
         ],
         "consequent": "Sac réutilisable",
@@ -2055,6 +2034,27 @@
             "Item_EN": "Reusable bag",
             "Category": "Maison",
             "Price": 1.49
+        }
+    },
+    {
+        "antecedents": [
+            "Sac réutilisable"
+        ],
+        "consequent": "Parmesan râpé",
+        "support": 0.082911,
+        "confidence": 0.092121,
+        "lift": 1.000605,
+        "antecedents_info": [
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Grated parmesan",
+            "Category": "Fromages",
+            "Price": 6.49
         }
     },
     {
@@ -2143,27 +2143,6 @@
     },
     {
         "antecedents": [
-            "Poitrine de poulet"
-        ],
-        "consequent": "Sac réutilisable",
-        "support": 0.050407,
-        "confidence": 0.90101,
-        "lift": 1.001093,
-        "antecedents_info": [
-            {
-                "Item_EN": "Chicken breast",
-                "Category": "Viandes",
-                "Price": 12.99
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Reusable bag",
-            "Category": "Maison",
-            "Price": 1.49
-        }
-    },
-    {
-        "antecedents": [
             "Sac réutilisable"
         ],
         "consequent": "Poitrine de poulet",
@@ -2185,23 +2164,23 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable"
+            "Poitrine de poulet"
         ],
-        "consequent": "Pommes",
-        "support": 0.082351,
-        "confidence": 0.091498,
-        "lift": 1.001768,
+        "consequent": "Sac réutilisable",
+        "support": 0.050407,
+        "confidence": 0.90101,
+        "lift": 1.001093,
         "antecedents_info": [
             {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
+                "Item_EN": "Chicken breast",
+                "Category": "Viandes",
+                "Price": 12.99
             }
         ],
         "consequent_info": {
-            "Item_EN": "Apples",
-            "Category": "Fruits et légumes",
-            "Price": 4.99
+            "Item_EN": "Reusable bag",
+            "Category": "Maison",
+            "Price": 1.49
         }
     },
     {
@@ -2229,10 +2208,10 @@
         "antecedents": [
             "Sac réutilisable"
         ],
-        "consequent": "Pâtes alimentaires",
-        "support": 0.121014,
-        "confidence": 0.134456,
-        "lift": 1.000767,
+        "consequent": "Pommes",
+        "support": 0.082351,
+        "confidence": 0.091498,
+        "lift": 1.001768,
         "antecedents_info": [
             {
                 "Item_EN": "Reusable bag",
@@ -2241,9 +2220,9 @@
             }
         ],
         "consequent_info": {
-            "Item_EN": "Pasta",
-            "Category": "Épicerie",
-            "Price": 2.49
+            "Item_EN": "Apples",
+            "Category": "Fruits et légumes",
+            "Price": 4.99
         }
     },
     {
@@ -2265,6 +2244,27 @@
             "Item_EN": "Reusable bag",
             "Category": "Maison",
             "Price": 1.49
+        }
+    },
+    {
+        "antecedents": [
+            "Sac réutilisable"
+        ],
+        "consequent": "Pâtes alimentaires",
+        "support": 0.121014,
+        "confidence": 0.134456,
+        "lift": 1.000767,
+        "antecedents_info": [
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Pasta",
+            "Category": "Épicerie",
+            "Price": 2.49
         }
     },
     {
@@ -2437,27 +2437,6 @@
     },
     {
         "antecedents": [
-            "Sauce soya"
-        ],
-        "consequent": "Sac réutilisable",
-        "support": 0.054713,
-        "confidence": 0.900759,
-        "lift": 1.000814,
-        "antecedents_info": [
-            {
-                "Item_EN": "Soy sauce",
-                "Category": "Épicerie",
-                "Price": 3.89
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Reusable bag",
-            "Category": "Maison",
-            "Price": 1.49
-        }
-    },
-    {
-        "antecedents": [
             "Sac réutilisable"
         ],
         "consequent": "Sauce soya",
@@ -2475,6 +2454,27 @@
             "Item_EN": "Soy sauce",
             "Category": "Épicerie",
             "Price": 3.89
+        }
+    },
+    {
+        "antecedents": [
+            "Sauce soya"
+        ],
+        "consequent": "Sac réutilisable",
+        "support": 0.054713,
+        "confidence": 0.900759,
+        "lift": 1.000814,
+        "antecedents_info": [
+            {
+                "Item_EN": "Soy sauce",
+                "Category": "Épicerie",
+                "Price": 3.89
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Reusable bag",
+            "Category": "Maison",
+            "Price": 1.49
         }
     },
     {
@@ -2563,27 +2563,6 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable"
-        ],
-        "consequent": "Saucisses",
-        "support": 0.075762,
-        "confidence": 0.084178,
-        "lift": 1.000435,
-        "antecedents_info": [
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Sausages",
-            "Category": "Viandes",
-            "Price": 7.49
-        }
-    },
-    {
-        "antecedents": [
             "Saucisses"
         ],
         "consequent": "Sac réutilisable",
@@ -2605,23 +2584,23 @@
     },
     {
         "antecedents": [
-            "Savon à vaisselle"
+            "Sac réutilisable"
         ],
-        "consequent": "Sac réutilisable",
-        "support": 0.134936,
-        "confidence": 0.900654,
-        "lift": 1.000698,
+        "consequent": "Saucisses",
+        "support": 0.075762,
+        "confidence": 0.084178,
+        "lift": 1.000435,
         "antecedents_info": [
             {
-                "Item_EN": "Dish soap",
+                "Item_EN": "Reusable bag",
                 "Category": "Maison",
-                "Price": 4.49
+                "Price": 1.49
             }
         ],
         "consequent_info": {
-            "Item_EN": "Reusable bag",
-            "Category": "Maison",
-            "Price": 1.49
+            "Item_EN": "Sausages",
+            "Category": "Viandes",
+            "Price": 7.49
         }
     },
     {
@@ -2643,6 +2622,27 @@
             "Item_EN": "Dish soap",
             "Category": "Maison",
             "Price": 4.49
+        }
+    },
+    {
+        "antecedents": [
+            "Savon à vaisselle"
+        ],
+        "consequent": "Sac réutilisable",
+        "support": 0.134936,
+        "confidence": 0.900654,
+        "lift": 1.000698,
+        "antecedents_info": [
+            {
+                "Item_EN": "Dish soap",
+                "Category": "Maison",
+                "Price": 4.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Reusable bag",
+            "Category": "Maison",
+            "Price": 1.49
         }
     },
     {
@@ -2689,27 +2689,6 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable"
-        ],
-        "consequent": "Thon en conserve",
-        "support": 0.08635,
-        "confidence": 0.095942,
-        "lift": 1.00105,
-        "antecedents_info": [
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Canned tuna",
-            "Category": "Poissons",
-            "Price": 2.49
-        }
-    },
-    {
-        "antecedents": [
             "Thon en conserve"
         ],
         "consequent": "Sac réutilisable",
@@ -2731,23 +2710,23 @@
     },
     {
         "antecedents": [
-            "Yogourt grec"
+            "Sac réutilisable"
         ],
-        "consequent": "Sac réutilisable",
-        "support": 0.092402,
-        "confidence": 0.900122,
-        "lift": 1.000106,
+        "consequent": "Thon en conserve",
+        "support": 0.08635,
+        "confidence": 0.095942,
+        "lift": 1.00105,
         "antecedents_info": [
             {
-                "Item_EN": "Greek yogurt",
-                "Category": "Produits laitiers",
-                "Price": 5.49
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
             }
         ],
         "consequent_info": {
-            "Item_EN": "Reusable bag",
-            "Category": "Maison",
-            "Price": 1.49
+            "Item_EN": "Canned tuna",
+            "Category": "Poissons",
+            "Price": 2.49
         }
     },
     {
@@ -2773,23 +2752,23 @@
     },
     {
         "antecedents": [
-            "Steak de boeuf"
+            "Yogourt grec"
         ],
-        "consequent": "Saucisses",
-        "support": 0.051352,
-        "confidence": 0.486786,
-        "lift": 5.785357,
+        "consequent": "Sac réutilisable",
+        "support": 0.092402,
+        "confidence": 0.900122,
+        "lift": 1.000106,
         "antecedents_info": [
             {
-                "Item_EN": "Beef steak",
-                "Category": "Viandes",
-                "Price": 18.99
+                "Item_EN": "Greek yogurt",
+                "Category": "Produits laitiers",
+                "Price": 5.49
             }
         ],
         "consequent_info": {
-            "Item_EN": "Sausages",
-            "Category": "Viandes",
-            "Price": 7.49
+            "Item_EN": "Reusable bag",
+            "Category": "Maison",
+            "Price": 1.49
         }
     },
     {
@@ -2811,6 +2790,54 @@
             "Item_EN": "Beef steak",
             "Category": "Viandes",
             "Price": 18.99
+        }
+    },
+    {
+        "antecedents": [
+            "Steak de boeuf"
+        ],
+        "consequent": "Saucisses",
+        "support": 0.051352,
+        "confidence": 0.486786,
+        "lift": 5.785357,
+        "antecedents_info": [
+            {
+                "Item_EN": "Beef steak",
+                "Category": "Viandes",
+                "Price": 18.99
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Sausages",
+            "Category": "Viandes",
+            "Price": 7.49
+        }
+    },
+    {
+        "antecedents": [
+            "Ail",
+            "Pâtes alimentaires"
+        ],
+        "consequent": "Sac réutilisable",
+        "support": 0.063927,
+        "confidence": 0.900038,
+        "lift": 1.000013,
+        "antecedents_info": [
+            {
+                "Item_EN": "Garlic",
+                "Category": "Fruits et légumes",
+                "Price": 1.49
+            },
+            {
+                "Item_EN": "Pasta",
+                "Category": "Épicerie",
+                "Price": 2.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Reusable bag",
+            "Category": "Maison",
+            "Price": 1.49
         }
     },
     {
@@ -2865,33 +2892,6 @@
             "Item_EN": "Pasta",
             "Category": "Épicerie",
             "Price": 2.49
-        }
-    },
-    {
-        "antecedents": [
-            "Ail",
-            "Pâtes alimentaires"
-        ],
-        "consequent": "Sac réutilisable",
-        "support": 0.063927,
-        "confidence": 0.900038,
-        "lift": 1.000013,
-        "antecedents_info": [
-            {
-                "Item_EN": "Garlic",
-                "Category": "Fruits et légumes",
-                "Price": 1.49
-            },
-            {
-                "Item_EN": "Pasta",
-                "Category": "Épicerie",
-                "Price": 2.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Reusable bag",
-            "Category": "Maison",
-            "Price": 1.49
         }
     },
     {
@@ -2977,33 +2977,6 @@
     },
     {
         "antecedents": [
-            "Bière",
-            "Charbon de bois"
-        ],
-        "consequent": "Sac réutilisable",
-        "support": 0.06146,
-        "confidence": 0.900341,
-        "lift": 1.00035,
-        "antecedents_info": [
-            {
-                "Item_EN": "Beer",
-                "Category": "Boissons",
-                "Price": 14.99
-            },
-            {
-                "Item_EN": "Charcoal",
-                "Category": "Épicerie",
-                "Price": 11.99
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Reusable bag",
-            "Category": "Maison",
-            "Price": 1.49
-        }
-    },
-    {
-        "antecedents": [
             "Charbon de bois",
             "Sac réutilisable"
         ],
@@ -3027,6 +3000,33 @@
             "Item_EN": "Beer",
             "Category": "Boissons",
             "Price": 14.99
+        }
+    },
+    {
+        "antecedents": [
+            "Bière",
+            "Charbon de bois"
+        ],
+        "consequent": "Sac réutilisable",
+        "support": 0.06146,
+        "confidence": 0.900341,
+        "lift": 1.00035,
+        "antecedents_info": [
+            {
+                "Item_EN": "Beer",
+                "Category": "Boissons",
+                "Price": 14.99
+            },
+            {
+                "Item_EN": "Charcoal",
+                "Category": "Épicerie",
+                "Price": 11.99
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Reusable bag",
+            "Category": "Maison",
+            "Price": 1.49
         }
     },
     {
@@ -3085,33 +3085,6 @@
     },
     {
         "antecedents": [
-            "Café moulu",
-            "Croissants"
-        ],
-        "consequent": "Sac réutilisable",
-        "support": 0.0535,
-        "confidence": 0.900704,
-        "lift": 1.000753,
-        "antecedents_info": [
-            {
-                "Item_EN": "Ground coffee",
-                "Category": "Boissons",
-                "Price": 11.99
-            },
-            {
-                "Item_EN": "Croissants",
-                "Category": "Boulangerie",
-                "Price": 5.99
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Reusable bag",
-            "Category": "Maison",
-            "Price": 1.49
-        }
-    },
-    {
-        "antecedents": [
             "Croissants",
             "Sac réutilisable"
         ],
@@ -3135,6 +3108,33 @@
             "Item_EN": "Ground coffee",
             "Category": "Boissons",
             "Price": 11.99
+        }
+    },
+    {
+        "antecedents": [
+            "Café moulu",
+            "Croissants"
+        ],
+        "consequent": "Sac réutilisable",
+        "support": 0.0535,
+        "confidence": 0.900704,
+        "lift": 1.000753,
+        "antecedents_info": [
+            {
+                "Item_EN": "Ground coffee",
+                "Category": "Boissons",
+                "Price": 11.99
+            },
+            {
+                "Item_EN": "Croissants",
+                "Category": "Boulangerie",
+                "Price": 5.99
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Reusable bag",
+            "Category": "Maison",
+            "Price": 1.49
         }
     },
     {
@@ -3221,33 +3221,6 @@
     {
         "antecedents": [
             "Charbon de bois",
-            "Pain à hamburger"
-        ],
-        "consequent": "Ketchup",
-        "support": 0.052984,
-        "confidence": 0.606412,
-        "lift": 6.676336,
-        "antecedents_info": [
-            {
-                "Item_EN": "Charcoal",
-                "Category": "Épicerie",
-                "Price": 11.99
-            },
-            {
-                "Item_EN": "Burger buns",
-                "Category": "Boulangerie",
-                "Price": 3.99
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Ketchup",
-            "Category": "Épicerie",
-            "Price": 3.49
-        }
-    },
-    {
-        "antecedents": [
-            "Charbon de bois",
             "Ketchup"
         ],
         "consequent": "Pain à hamburger",
@@ -3270,6 +3243,33 @@
             "Item_EN": "Burger buns",
             "Category": "Boulangerie",
             "Price": 3.99
+        }
+    },
+    {
+        "antecedents": [
+            "Charbon de bois",
+            "Pain à hamburger"
+        ],
+        "consequent": "Ketchup",
+        "support": 0.052984,
+        "confidence": 0.606412,
+        "lift": 6.676336,
+        "antecedents_info": [
+            {
+                "Item_EN": "Charcoal",
+                "Category": "Épicerie",
+                "Price": 11.99
+            },
+            {
+                "Item_EN": "Burger buns",
+                "Category": "Boulangerie",
+                "Price": 3.99
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Ketchup",
+            "Category": "Épicerie",
+            "Price": 3.49
         }
     },
     {
@@ -3302,33 +3302,6 @@
     {
         "antecedents": [
             "Charbon de bois",
-            "Sac réutilisable"
-        ],
-        "consequent": "Ketchup",
-        "support": 0.069679,
-        "confidence": 0.550596,
-        "lift": 6.061828,
-        "antecedents_info": [
-            {
-                "Item_EN": "Charcoal",
-                "Category": "Épicerie",
-                "Price": 11.99
-            },
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Ketchup",
-            "Category": "Épicerie",
-            "Price": 3.49
-        }
-    },
-    {
-        "antecedents": [
-            "Charbon de bois",
             "Ketchup"
         ],
         "consequent": "Sac réutilisable",
@@ -3351,6 +3324,33 @@
             "Item_EN": "Reusable bag",
             "Category": "Maison",
             "Price": 1.49
+        }
+    },
+    {
+        "antecedents": [
+            "Charbon de bois",
+            "Sac réutilisable"
+        ],
+        "consequent": "Ketchup",
+        "support": 0.069679,
+        "confidence": 0.550596,
+        "lift": 6.061828,
+        "antecedents_info": [
+            {
+                "Item_EN": "Charcoal",
+                "Category": "Épicerie",
+                "Price": 11.99
+            },
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Ketchup",
+            "Category": "Épicerie",
+            "Price": 3.49
         }
     },
     {
@@ -3378,6 +3378,33 @@
             "Item_EN": "Charcoal",
             "Category": "Épicerie",
             "Price": 11.99
+        }
+    },
+    {
+        "antecedents": [
+            "Charbon de bois",
+            "Ketchup"
+        ],
+        "consequent": "Steak de boeuf",
+        "support": 0.055708,
+        "confidence": 0.720263,
+        "lift": 6.827653,
+        "antecedents_info": [
+            {
+                "Item_EN": "Charcoal",
+                "Category": "Épicerie",
+                "Price": 11.99
+            },
+            {
+                "Item_EN": "Ketchup",
+                "Category": "Épicerie",
+                "Price": 3.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Beef steak",
+            "Category": "Viandes",
+            "Price": 18.99
         }
     },
     {
@@ -3432,33 +3459,6 @@
             "Item_EN": "Charcoal",
             "Category": "Épicerie",
             "Price": 11.99
-        }
-    },
-    {
-        "antecedents": [
-            "Charbon de bois",
-            "Ketchup"
-        ],
-        "consequent": "Steak de boeuf",
-        "support": 0.055708,
-        "confidence": 0.720263,
-        "lift": 6.827653,
-        "antecedents_info": [
-            {
-                "Item_EN": "Charcoal",
-                "Category": "Épicerie",
-                "Price": 11.99
-            },
-            {
-                "Item_EN": "Ketchup",
-                "Category": "Épicerie",
-                "Price": 3.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Beef steak",
-            "Category": "Viandes",
-            "Price": 18.99
         }
     },
     {
@@ -3544,6 +3544,33 @@
     },
     {
         "antecedents": [
+            "Charbon de bois",
+            "Pain à hamburger"
+        ],
+        "consequent": "Steak de boeuf",
+        "support": 0.063045,
+        "confidence": 0.721562,
+        "lift": 6.839965,
+        "antecedents_info": [
+            {
+                "Item_EN": "Charcoal",
+                "Category": "Épicerie",
+                "Price": 11.99
+            },
+            {
+                "Item_EN": "Burger buns",
+                "Category": "Boulangerie",
+                "Price": 3.99
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Beef steak",
+            "Category": "Viandes",
+            "Price": 18.99
+        }
+    },
+    {
+        "antecedents": [
             "Pain à hamburger",
             "Steak de boeuf"
         ],
@@ -3572,33 +3599,6 @@
     {
         "antecedents": [
             "Charbon de bois",
-            "Pain à hamburger"
-        ],
-        "consequent": "Steak de boeuf",
-        "support": 0.063045,
-        "confidence": 0.721562,
-        "lift": 6.839965,
-        "antecedents_info": [
-            {
-                "Item_EN": "Charcoal",
-                "Category": "Épicerie",
-                "Price": 11.99
-            },
-            {
-                "Item_EN": "Burger buns",
-                "Category": "Boulangerie",
-                "Price": 3.99
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Beef steak",
-            "Category": "Viandes",
-            "Price": 18.99
-        }
-    },
-    {
-        "antecedents": [
-            "Charbon de bois",
             "Sauce BBQ"
         ],
         "consequent": "Sac réutilisable",
@@ -3621,6 +3621,33 @@
             "Item_EN": "Reusable bag",
             "Category": "Maison",
             "Price": 1.49
+        }
+    },
+    {
+        "antecedents": [
+            "Charbon de bois",
+            "Sac réutilisable"
+        ],
+        "consequent": "Sauce BBQ",
+        "support": 0.055851,
+        "confidence": 0.441328,
+        "lift": 5.843243,
+        "antecedents_info": [
+            {
+                "Item_EN": "Charcoal",
+                "Category": "Épicerie",
+                "Price": 11.99
+            },
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "BBQ sauce",
+            "Category": "Épicerie",
+            "Price": 4.19
         }
     },
     {
@@ -3653,12 +3680,12 @@
     {
         "antecedents": [
             "Charbon de bois",
-            "Sac réutilisable"
+            "Saucisses"
         ],
-        "consequent": "Sauce BBQ",
-        "support": 0.055851,
-        "confidence": 0.441328,
-        "lift": 5.843243,
+        "consequent": "Sac réutilisable",
+        "support": 0.063725,
+        "confidence": 0.900529,
+        "lift": 1.000558,
         "antecedents_info": [
             {
                 "Item_EN": "Charcoal",
@@ -3666,15 +3693,15 @@
                 "Price": 11.99
             },
             {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
+                "Item_EN": "Sausages",
+                "Category": "Viandes",
+                "Price": 7.49
             }
         ],
         "consequent_info": {
-            "Item_EN": "BBQ sauce",
-            "Category": "Épicerie",
-            "Price": 4.19
+            "Item_EN": "Reusable bag",
+            "Category": "Maison",
+            "Price": 1.49
         }
     },
     {
@@ -3702,33 +3729,6 @@
             "Item_EN": "Sausages",
             "Category": "Viandes",
             "Price": 7.49
-        }
-    },
-    {
-        "antecedents": [
-            "Charbon de bois",
-            "Saucisses"
-        ],
-        "consequent": "Sac réutilisable",
-        "support": 0.063725,
-        "confidence": 0.900529,
-        "lift": 1.000558,
-        "antecedents_info": [
-            {
-                "Item_EN": "Charcoal",
-                "Category": "Épicerie",
-                "Price": 11.99
-            },
-            {
-                "Item_EN": "Sausages",
-                "Category": "Viandes",
-                "Price": 7.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Reusable bag",
-            "Category": "Maison",
-            "Price": 1.49
         }
     },
     {
@@ -3787,6 +3787,33 @@
     },
     {
         "antecedents": [
+            "Charbon de bois",
+            "Sac réutilisable"
+        ],
+        "consequent": "Steak de boeuf",
+        "support": 0.083003,
+        "confidence": 0.655881,
+        "lift": 6.217349,
+        "antecedents_info": [
+            {
+                "Item_EN": "Charcoal",
+                "Category": "Épicerie",
+                "Price": 11.99
+            },
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Beef steak",
+            "Category": "Viandes",
+            "Price": 18.99
+        }
+    },
+    {
+        "antecedents": [
             "Sac réutilisable",
             "Steak de boeuf"
         ],
@@ -3815,12 +3842,12 @@
     {
         "antecedents": [
             "Charbon de bois",
-            "Sac réutilisable"
+            "Saucisses"
         ],
         "consequent": "Steak de boeuf",
-        "support": 0.083003,
-        "confidence": 0.655881,
-        "lift": 6.217349,
+        "support": 0.051037,
+        "confidence": 0.721228,
+        "lift": 6.836806,
         "antecedents_info": [
             {
                 "Item_EN": "Charcoal",
@@ -3828,9 +3855,9 @@
                 "Price": 11.99
             },
             {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
+                "Item_EN": "Sausages",
+                "Category": "Viandes",
+                "Price": 7.49
             }
         ],
         "consequent_info": {
@@ -3895,60 +3922,6 @@
     },
     {
         "antecedents": [
-            "Charbon de bois",
-            "Saucisses"
-        ],
-        "consequent": "Steak de boeuf",
-        "support": 0.051037,
-        "confidence": 0.721228,
-        "lift": 6.836806,
-        "antecedents_info": [
-            {
-                "Item_EN": "Charcoal",
-                "Category": "Épicerie",
-                "Price": 11.99
-            },
-            {
-                "Item_EN": "Sausages",
-                "Category": "Viandes",
-                "Price": 7.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Beef steak",
-            "Category": "Viandes",
-            "Price": 18.99
-        }
-    },
-    {
-        "antecedents": [
-            "Concombre",
-            "Sac réutilisable"
-        ],
-        "consequent": "Laitue romaine",
-        "support": 0.050241,
-        "confidence": 0.799341,
-        "lift": 7.355676,
-        "antecedents_info": [
-            {
-                "Item_EN": "Cucumber",
-                "Category": "Fruits et légumes",
-                "Price": 1.99
-            },
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Romaine lettuce",
-            "Category": "Fruits et légumes",
-            "Price": 3.49
-        }
-    },
-    {
-        "antecedents": [
             "Concombre",
             "Laitue romaine"
         ],
@@ -3999,6 +3972,33 @@
             "Item_EN": "Cucumber",
             "Category": "Fruits et légumes",
             "Price": 1.99
+        }
+    },
+    {
+        "antecedents": [
+            "Concombre",
+            "Sac réutilisable"
+        ],
+        "consequent": "Laitue romaine",
+        "support": 0.050241,
+        "confidence": 0.799341,
+        "lift": 7.355676,
+        "antecedents_info": [
+            {
+                "Item_EN": "Cucumber",
+                "Category": "Fruits et légumes",
+                "Price": 1.99
+            },
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Romaine lettuce",
+            "Category": "Fruits et légumes",
+            "Price": 3.49
         }
     },
     {
@@ -4057,33 +4057,6 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable",
-            "Steak de boeuf"
-        ],
-        "consequent": "Ketchup",
-        "support": 0.05047,
-        "confidence": 0.530749,
-        "lift": 5.843325,
-        "antecedents_info": [
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            },
-            {
-                "Item_EN": "Beef steak",
-                "Category": "Viandes",
-                "Price": 18.99
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Ketchup",
-            "Category": "Épicerie",
-            "Price": 3.49
-        }
-    },
-    {
-        "antecedents": [
             "Ketchup",
             "Steak de boeuf"
         ],
@@ -4138,29 +4111,29 @@
     },
     {
         "antecedents": [
-            "Laitue romaine",
-            "Sac réutilisable"
+            "Sac réutilisable",
+            "Steak de boeuf"
         ],
-        "consequent": "Tomates",
-        "support": 0.06018,
-        "confidence": 0.614721,
-        "lift": 7.593466,
+        "consequent": "Ketchup",
+        "support": 0.05047,
+        "confidence": 0.530749,
+        "lift": 5.843325,
         "antecedents_info": [
-            {
-                "Item_EN": "Romaine lettuce",
-                "Category": "Fruits et légumes",
-                "Price": 3.49
-            },
             {
                 "Item_EN": "Reusable bag",
                 "Category": "Maison",
                 "Price": 1.49
+            },
+            {
+                "Item_EN": "Beef steak",
+                "Category": "Viandes",
+                "Price": 18.99
             }
         ],
         "consequent_info": {
-            "Item_EN": "Tomatoes",
-            "Category": "Fruits et légumes",
-            "Price": 4.29
+            "Item_EN": "Ketchup",
+            "Category": "Épicerie",
+            "Price": 3.49
         }
     },
     {
@@ -4192,6 +4165,33 @@
     },
     {
         "antecedents": [
+            "Laitue romaine",
+            "Sac réutilisable"
+        ],
+        "consequent": "Tomates",
+        "support": 0.06018,
+        "confidence": 0.614721,
+        "lift": 7.593466,
+        "antecedents_info": [
+            {
+                "Item_EN": "Romaine lettuce",
+                "Category": "Fruits et légumes",
+                "Price": 3.49
+            },
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Tomatoes",
+            "Category": "Fruits et légumes",
+            "Price": 4.29
+        }
+    },
+    {
+        "antecedents": [
             "Sac réutilisable",
             "Tomates"
         ],
@@ -4215,33 +4215,6 @@
             "Item_EN": "Romaine lettuce",
             "Category": "Fruits et légumes",
             "Price": 3.49
-        }
-    },
-    {
-        "antecedents": [
-            "Pain à hamburger",
-            "Steak de boeuf"
-        ],
-        "consequent": "Sac réutilisable",
-        "support": 0.057049,
-        "confidence": 0.900267,
-        "lift": 1.000267,
-        "antecedents_info": [
-            {
-                "Item_EN": "Burger buns",
-                "Category": "Boulangerie",
-                "Price": 3.99
-            },
-            {
-                "Item_EN": "Beef steak",
-                "Category": "Viandes",
-                "Price": 18.99
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Reusable bag",
-            "Category": "Maison",
-            "Price": 1.49
         }
     },
     {
@@ -4300,6 +4273,60 @@
     },
     {
         "antecedents": [
+            "Pain à hamburger",
+            "Steak de boeuf"
+        ],
+        "consequent": "Sac réutilisable",
+        "support": 0.057049,
+        "confidence": 0.900267,
+        "lift": 1.000267,
+        "antecedents_info": [
+            {
+                "Item_EN": "Burger buns",
+                "Category": "Boulangerie",
+                "Price": 3.99
+            },
+            {
+                "Item_EN": "Beef steak",
+                "Category": "Viandes",
+                "Price": 18.99
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Reusable bag",
+            "Category": "Maison",
+            "Price": 1.49
+        }
+    },
+    {
+        "antecedents": [
+            "Parmesan râpé",
+            "Pâtes alimentaires"
+        ],
+        "consequent": "Sac réutilisable",
+        "support": 0.070556,
+        "confidence": 0.900431,
+        "lift": 1.00045,
+        "antecedents_info": [
+            {
+                "Item_EN": "Grated parmesan",
+                "Category": "Fromages",
+                "Price": 6.49
+            },
+            {
+                "Item_EN": "Pasta",
+                "Category": "Épicerie",
+                "Price": 2.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Reusable bag",
+            "Category": "Maison",
+            "Price": 1.49
+        }
+    },
+    {
+        "antecedents": [
             "Pâtes alimentaires",
             "Sac réutilisable"
         ],
@@ -4350,33 +4377,6 @@
             "Item_EN": "Pasta",
             "Category": "Épicerie",
             "Price": 2.49
-        }
-    },
-    {
-        "antecedents": [
-            "Parmesan râpé",
-            "Pâtes alimentaires"
-        ],
-        "consequent": "Sac réutilisable",
-        "support": 0.070556,
-        "confidence": 0.900431,
-        "lift": 1.00045,
-        "antecedents_info": [
-            {
-                "Item_EN": "Grated parmesan",
-                "Category": "Fromages",
-                "Price": 6.49
-            },
-            {
-                "Item_EN": "Pasta",
-                "Category": "Épicerie",
-                "Price": 2.49
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Reusable bag",
-            "Category": "Maison",
-            "Price": 1.49
         }
     },
     {
@@ -4462,33 +4462,6 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable",
-            "Sauce tomate"
-        ],
-        "consequent": "Parmesan râpé",
-        "support": 0.054055,
-        "confidence": 0.5655,
-        "lift": 6.142398,
-        "antecedents_info": [
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            },
-            {
-                "Item_EN": "Tomato sauce",
-                "Category": "Épicerie",
-                "Price": 3.79
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Grated parmesan",
-            "Category": "Fromages",
-            "Price": 6.49
-        }
-    },
-    {
-        "antecedents": [
             "Parmesan râpé",
             "Sauce tomate"
         ],
@@ -4512,6 +4485,33 @@
             "Item_EN": "Reusable bag",
             "Category": "Maison",
             "Price": 1.49
+        }
+    },
+    {
+        "antecedents": [
+            "Sac réutilisable",
+            "Sauce tomate"
+        ],
+        "consequent": "Parmesan râpé",
+        "support": 0.054055,
+        "confidence": 0.5655,
+        "lift": 6.142398,
+        "antecedents_info": [
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            },
+            {
+                "Item_EN": "Tomato sauce",
+                "Category": "Épicerie",
+                "Price": 3.79
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Grated parmesan",
+            "Category": "Fromages",
+            "Price": 6.49
         }
     },
     {
@@ -4543,33 +4543,6 @@
     },
     {
         "antecedents": [
-            "Sac réutilisable",
-            "Sauce tomate"
-        ],
-        "consequent": "Pâtes alimentaires",
-        "support": 0.08331,
-        "confidence": 0.871553,
-        "lift": 6.487037,
-        "antecedents_info": [
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            },
-            {
-                "Item_EN": "Tomato sauce",
-                "Category": "Épicerie",
-                "Price": 3.79
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Pasta",
-            "Category": "Épicerie",
-            "Price": 2.49
-        }
-    },
-    {
-        "antecedents": [
             "Pâtes alimentaires",
             "Sauce tomate"
         ],
@@ -4593,6 +4566,33 @@
             "Item_EN": "Reusable bag",
             "Category": "Maison",
             "Price": 1.49
+        }
+    },
+    {
+        "antecedents": [
+            "Sac réutilisable",
+            "Sauce tomate"
+        ],
+        "consequent": "Pâtes alimentaires",
+        "support": 0.08331,
+        "confidence": 0.871553,
+        "lift": 6.487037,
+        "antecedents_info": [
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            },
+            {
+                "Item_EN": "Tomato sauce",
+                "Category": "Épicerie",
+                "Price": 3.79
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Pasta",
+            "Category": "Épicerie",
+            "Price": 2.49
         }
     },
     {
@@ -4679,39 +4679,6 @@
     {
         "antecedents": [
             "Charbon de bois",
-            "Sac réutilisable",
-            "Steak de boeuf"
-        ],
-        "consequent": "Ketchup",
-        "support": 0.050221,
-        "confidence": 0.60505,
-        "lift": 6.66135,
-        "antecedents_info": [
-            {
-                "Item_EN": "Charcoal",
-                "Category": "Épicerie",
-                "Price": 11.99
-            },
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            },
-            {
-                "Item_EN": "Beef steak",
-                "Category": "Viandes",
-                "Price": 18.99
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Ketchup",
-            "Category": "Épicerie",
-            "Price": 3.49
-        }
-    },
-    {
-        "antecedents": [
-            "Charbon de bois",
             "Ketchup",
             "Steak de boeuf"
         ],
@@ -4740,6 +4707,72 @@
             "Item_EN": "Reusable bag",
             "Category": "Maison",
             "Price": 1.49
+        }
+    },
+    {
+        "antecedents": [
+            "Charbon de bois",
+            "Ketchup",
+            "Sac réutilisable"
+        ],
+        "consequent": "Steak de boeuf",
+        "support": 0.050221,
+        "confidence": 0.720748,
+        "lift": 6.832253,
+        "antecedents_info": [
+            {
+                "Item_EN": "Charcoal",
+                "Category": "Épicerie",
+                "Price": 11.99
+            },
+            {
+                "Item_EN": "Ketchup",
+                "Category": "Épicerie",
+                "Price": 3.49
+            },
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Beef steak",
+            "Category": "Viandes",
+            "Price": 18.99
+        }
+    },
+    {
+        "antecedents": [
+            "Charbon de bois",
+            "Sac réutilisable",
+            "Steak de boeuf"
+        ],
+        "consequent": "Ketchup",
+        "support": 0.050221,
+        "confidence": 0.60505,
+        "lift": 6.66135,
+        "antecedents_info": [
+            {
+                "Item_EN": "Charcoal",
+                "Category": "Épicerie",
+                "Price": 11.99
+            },
+            {
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            },
+            {
+                "Item_EN": "Beef steak",
+                "Category": "Viandes",
+                "Price": 18.99
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Ketchup",
+            "Category": "Épicerie",
+            "Price": 3.49
         }
     },
     {
@@ -4778,13 +4811,13 @@
     {
         "antecedents": [
             "Charbon de bois",
-            "Ketchup",
-            "Sac réutilisable"
+            "Sac réutilisable",
+            "Steak de boeuf"
         ],
-        "consequent": "Steak de boeuf",
-        "support": 0.050221,
-        "confidence": 0.720748,
-        "lift": 6.832253,
+        "consequent": "Pain à hamburger",
+        "support": 0.056753,
+        "confidence": 0.683746,
+        "lift": 6.772649,
         "antecedents_info": [
             {
                 "Item_EN": "Charcoal",
@@ -4792,9 +4825,42 @@
                 "Price": 11.99
             },
             {
-                "Item_EN": "Ketchup",
+                "Item_EN": "Reusable bag",
+                "Category": "Maison",
+                "Price": 1.49
+            },
+            {
+                "Item_EN": "Beef steak",
+                "Category": "Viandes",
+                "Price": 18.99
+            }
+        ],
+        "consequent_info": {
+            "Item_EN": "Burger buns",
+            "Category": "Boulangerie",
+            "Price": 3.99
+        }
+    },
+    {
+        "antecedents": [
+            "Charbon de bois",
+            "Pain à hamburger",
+            "Sac réutilisable"
+        ],
+        "consequent": "Steak de boeuf",
+        "support": 0.056753,
+        "confidence": 0.721956,
+        "lift": 6.843708,
+        "antecedents_info": [
+            {
+                "Item_EN": "Charcoal",
                 "Category": "Épicerie",
-                "Price": 3.49
+                "Price": 11.99
+            },
+            {
+                "Item_EN": "Burger buns",
+                "Category": "Boulangerie",
+                "Price": 3.99
             },
             {
                 "Item_EN": "Reusable bag",
@@ -4843,39 +4909,6 @@
     },
     {
         "antecedents": [
-            "Charbon de bois",
-            "Sac réutilisable",
-            "Steak de boeuf"
-        ],
-        "consequent": "Pain à hamburger",
-        "support": 0.056753,
-        "confidence": 0.683746,
-        "lift": 6.772649,
-        "antecedents_info": [
-            {
-                "Item_EN": "Charcoal",
-                "Category": "Épicerie",
-                "Price": 11.99
-            },
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
-            },
-            {
-                "Item_EN": "Beef steak",
-                "Category": "Viandes",
-                "Price": 18.99
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Burger buns",
-            "Category": "Boulangerie",
-            "Price": 3.99
-        }
-    },
-    {
-        "antecedents": [
             "Pain à hamburger",
             "Sac réutilisable",
             "Steak de boeuf"
@@ -4909,35 +4942,35 @@
     },
     {
         "antecedents": [
-            "Charbon de bois",
-            "Pain à hamburger",
-            "Sac réutilisable"
+            "Parmesan râpé",
+            "Pâtes alimentaires",
+            "Sauce tomate"
         ],
-        "consequent": "Steak de boeuf",
-        "support": 0.056753,
-        "confidence": 0.721956,
-        "lift": 6.843708,
+        "consequent": "Sac réutilisable",
+        "support": 0.053763,
+        "confidence": 0.900523,
+        "lift": 1.000552,
         "antecedents_info": [
             {
-                "Item_EN": "Charcoal",
+                "Item_EN": "Grated parmesan",
+                "Category": "Fromages",
+                "Price": 6.49
+            },
+            {
+                "Item_EN": "Pasta",
                 "Category": "Épicerie",
-                "Price": 11.99
+                "Price": 2.49
             },
             {
-                "Item_EN": "Burger buns",
-                "Category": "Boulangerie",
-                "Price": 3.99
-            },
-            {
-                "Item_EN": "Reusable bag",
-                "Category": "Maison",
-                "Price": 1.49
+                "Item_EN": "Tomato sauce",
+                "Category": "Épicerie",
+                "Price": 3.79
             }
         ],
         "consequent_info": {
-            "Item_EN": "Beef steak",
-            "Category": "Viandes",
-            "Price": 18.99
+            "Item_EN": "Reusable bag",
+            "Category": "Maison",
+            "Price": 1.49
         }
     },
     {
@@ -5004,39 +5037,6 @@
             "Item_EN": "Pasta",
             "Category": "Épicerie",
             "Price": 2.49
-        }
-    },
-    {
-        "antecedents": [
-            "Parmesan râpé",
-            "Pâtes alimentaires",
-            "Sauce tomate"
-        ],
-        "consequent": "Sac réutilisable",
-        "support": 0.053763,
-        "confidence": 0.900523,
-        "lift": 1.000552,
-        "antecedents_info": [
-            {
-                "Item_EN": "Grated parmesan",
-                "Category": "Fromages",
-                "Price": 6.49
-            },
-            {
-                "Item_EN": "Pasta",
-                "Category": "Épicerie",
-                "Price": 2.49
-            },
-            {
-                "Item_EN": "Tomato sauce",
-                "Category": "Épicerie",
-                "Price": 3.79
-            }
-        ],
-        "consequent_info": {
-            "Item_EN": "Reusable bag",
-            "Category": "Maison",
-            "Price": 1.49
         }
     },
     {

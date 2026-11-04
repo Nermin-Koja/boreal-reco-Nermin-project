@@ -8,7 +8,7 @@
     "recommendable_products_count": 50,
     "total_catalogue_products": 98,
     "recommendation_coverage_percent": 51.02,
-    "mining_date": "2026-11-02",
+    "mining_date": "2026-11-03",
     "rule_source": "models/rules.json",
     "popular_products": [
         {

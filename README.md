@@ -1,49 +1,47 @@
-# Boréal Marché — Grocery Recommendation Engine
+# Boréal Marché — Grocery Product Recommendation System
 
-**Individual Project by Nermin Koja**  
 **Course:** 420-975-VA — Unsupervised Learning  
+**Project:** Individual Project — Association Rules and Apriori  
+**Student:** Nermin Koja  
 **Professor:** Steve  
-**Semester:** Fall 2026  
-**Submission Date:** November 4, 2026
+**Semester:** Fall 2026
 
 ---
 
 ## 1. Project Overview
 
-Boréal Marché is a grocery recommendation engine that suggests products to customers based on the items already in their shopping baskets.
+Boréal Marché is a grocery product recommendation system built using association rule mining.
 
-The project uses Association Rule Mining and the Apriori algorithm to discover relationships between products frequently purchased together.
+The project analyzes one million shopping baskets to discover products that are frequently purchased together. It uses the Apriori algorithm to identify frequent itemsets and generate association rules.
 
-The goal is to help customers discover relevant products while providing transparent explanations of why each product is recommended.
+A Streamlit application allows users to browse a grocery catalogue, create a shopping basket, and receive product recommendations based on the saved association rules.
 
-This is an individual project developed using the course datasets and Python-based data mining tools.
+The application loads precomputed rules from JSON files. It does not run Apriori when a customer uses the application.
 
-## 2. Dataset
+## 2. Dataset Description
 
-The project uses the transaction and product catalogue datasets provided for the course.
+The project uses a grocery transaction dataset containing:
 
-### Transaction dataset
+| Dataset characteristic | Value |
+|---|---:|
+| Total transactions (baskets) | 1,000,000 |
+| Transaction-product rows | 8,379,837 |
+| Unique products | 98 |
+| Average products per basket | 8.38 |
+| Date range | January–December 2026 |
 
-- 1,000,000 unique shopping baskets.
-- 8,379,837 basket-product records.
-- 98 unique products.
-- Approximately 8.4 products per basket on average.
+The catalogue contains four fields:
 
-### Product catalogue
+- `Item`: Original French product name.
+- `Item_EN`: English product name.
+- `Category`: Product category.
+- `Price`: Product price.
 
-The catalogue contains 98 products, including:
+The transaction dataset contains transaction IDs, dates, customer IDs, and product names.
 
-- Product names in French and English.
-- Product categories.
-- Product prices.
+The most frequently purchased product is **Sac réutilisable (Reusable bag)**, appearing in 900,026 baskets, or approximately 90% of all baskets.
 
-### Product frequency analysis
-
-The exploratory analysis identifies the most frequently purchased products and the five rarest products.
-
-The most frequent product is **Sac réutilisable (Reusable bag)**, appearing in 900,026 baskets, representing approximately 90% of all baskets.
-
-The rarest products include:
+The five rarest products are:
 
 - Foie gras
 - Vinaigre balsamique vieilli
@@ -51,7 +49,7 @@ The rarest products include:
 - Huile de truffe
 - Safran
 
-Rare products may not appear in frequent itemsets when minimum support thresholds are applied.
+Their low frequency is important because products appearing in very few baskets may not meet the minimum support threshold used during mining.
 
 ## 3. Technologies Used
 
@@ -60,29 +58,32 @@ Rare products may not appear in frequent itemsets when minimum support threshold
 - NumPy
 - SciPy
 - mlxtend
+- Apriori algorithm
 - Streamlit
+- Matplotlib
+- psutil
+- tracemalloc
 - Jupyter Notebook
+- JSON
 
 ## 4. Project Structure
-
-The project is organized as follows:
 
 ```text
 boreal-reco-Nermin/
 │
-├── data/
-│   ├── transactions.csv
-│   └── products.csv
+├── app/
+│   └── streamlit_app.py
 │
-├── notebooks/
-│   └── 01_mining.ipynb
+├── data/
+│   ├── products.csv
+│   └── transactions.csv
 │
 ├── models/
 │   ├── rules.json
 │   └── metadata.json
 │
-├── app/
-│   └── streamlit_app.py
+├── notebooks/
+│   └── 01_mining.ipynb
 │
 ├── reports/
 │   └── benchmark.md
@@ -93,266 +94,362 @@ boreal-reco-Nermin/
 └── requirements.txt
 ```
 
-## 5. Methodology
+The transaction dataset is large. It should be obtained from the course-provided source and placed in the `data/` folder as `transactions.csv`. The raw transaction file should not be committed to GitHub if it exceeds the repository's file-size limit.
 
-The project follows these main steps:
+## 5. Data Preparation and Catalogue Review
 
-1. Load and inspect the transaction and product datasets.
-2. Explore product frequencies and transaction statistics.
-3. Convert transactions into a sparse basket-product matrix.
-4. Apply the Apriori algorithm to identify frequent itemsets.
-5. Generate association rules.
-6. Evaluate rules using support, confidence, and lift.
-7. Compare seasonal purchasing patterns.
-8. Select and export recommendation rules.
-9. Build an interactive Streamlit application.
+The transaction data was loaded and checked before mining.
 
-Apriori is the only frequent itemset mining algorithm used in this project.
+The analysis confirmed:
 
-## 6. Association Rule Mining
+- 1,000,000 unique shopping baskets.
+- 8,379,837 transaction-product rows.
+- 98 unique catalogue products.
+- An average basket size of approximately 8.38 products.
+- No duplicate basket-product records were found.
 
-The Apriori algorithm identifies products that frequently appear together in shopping baskets.
+The transaction data was transformed into a Boolean basket representation, where each row represents a basket and each product is represented by a Boolean value indicating whether it was purchased.
 
-Three main metrics are used to evaluate association rules:
+### Product catalogue review
 
-- **Support:** How frequently the products in a rule appear together across all baskets.
-- **Confidence:** How often the consequent product appears when the antecedent products are present.
-- **Lift:** How much stronger the association is compared with what would be expected from the consequent product's normal frequency.
+The catalogue was reviewed for possible duplicate product entries.
 
-### Final recommendation rule selection
+Two similar entries were identified:
 
-The main recommendation engine uses:
+- Baguette — $2.99
+- Pain baguette rustique — $3.99
 
-- Minimum support: `0.05`
-- Minimum lift: `1.0`
-- Lift filter: `lift > 1`
+These entries were kept separate because their names and prices differ, and the available catalogue information does not establish that they represent the same product.
 
-The exported recommendation rules contain:
+No confirmed duplicate product pair could be established from the available catalogue information. This is an important data-quality observation rather than an assumption that two different products are duplicates.
 
-- 215 association rules.
-- Single-product consequents.
-- Antecedents that may contain multiple products.
+### Initial prediction
 
-This allows the application to recommend a product based on either one product or a combination of products already in the basket.
+Before running Apriori, I predicted that **Sac réutilisable (Reusable bag)** could cause difficulties because it appears in approximately 90% of all baskets.
 
-## 7. Performance Benchmarking
+The results supported this prediction. Rules involving this product can have high confidence simply because the product is extremely common, while their lift may remain close to 1.
 
-Different minimum support values were evaluated using Apriori with `low_memory=True`.
+This demonstrates why confidence should not be interpreted without considering lift.
 
-The default Apriori execution was also compared with the low-memory implementation.
+## 6. Apriori Algorithm and Association Metrics
 
-| Configuration | Minimum support | Frequent itemsets | Time (seconds) | Sampled peak RSS (MB) |
-|---|---:|---:|---:|---:|
-| Default | 0.05 | 191 | 74.11 | 5659.84 |
-| Low memory | 0.05 | 191 | 4.77 | 274.17 |
-| Low memory | 0.02 | 658 | 11.23 | 318.59 |
-| Low memory | 0.01 | 2,267 | 39.68 | 307.38 |
-| Low memory | 0.005 | 7,106 | 77.88 | 319.99 |
+The project uses the Apriori implementation from:
 
-The benchmark shows that `low_memory=True` substantially reduced the sampled peak memory usage and execution time at minimum support 0.05.
+`mlxtend.frequent_patterns.apriori`
 
-Lower support thresholds produced more frequent itemsets and required more processing time.
+The following minimum support thresholds were tested:
 
-The benchmark results demonstrate the trade-off between discovering more product combinations and computational efficiency.
+- 0.05
+- 0.02
+- 0.01
+- 0.005
+
+The low-memory option was used for the main mining runs.
+
+### Association rule metrics
+
+**Support:** The proportion of all shopping baskets that contain both the antecedent and consequent products.
+
+**Confidence:** The proportion of baskets containing the antecedent that also contain the consequent.
+
+**Lift:** How much more frequently the products occur together compared with what would be expected if their purchases were independent.
+
+A lift greater than 1 indicates a positive association. A lift equal to 1 indicates no association beyond independence, while a lift below 1 indicates a negative association.
+
+The project focuses on rules with lift greater than 1.
+
+Simple rules, containing one product on each side, were examined separately from rules with multiple products in the antecedent.
+
+## 7. Final Recommendation Rules
+
+The saved recommendation model contains **215 association rules**.
+
+The main saved model uses:
+
+- Minimum support: 0.05
+- Minimum lift: Greater than 1
+- Saved rules: 215
+- Catalogue products: 98
+- Products represented in recommendations: 50
+- Catalogue coverage: 51.02%
+
+Rules can contain multiple products in their antecedent. The recommendation application checks that all antecedent products are present in the customer's basket before a rule fires.
+
+### Verified example from the saved model
+
+**Charbon de bois (Charcoal) → Saucisses (Sausages)**
+
+| Metric | Value |
+|---|---:|
+| Support | 7.0764% |
+| Confidence | 50.344% |
+| Lift | 5.983287 |
+
+This indicates a positive association between charcoal and sausages in the transaction dataset.
+
+The association does not prove that purchasing one product causes the purchase of the other.
 
 ## 8. Seasonal Analysis
 
-The project compares purchasing patterns across summer and winter.
+The seasonal analysis compares:
 
-Separate association rules were generated to identify seasonal differences in product combinations.
+- **Summer:** June, July, and August.
+- **Winter:** December, January, and February.
+
+The same mining approach was applied to each seasonal dataset.
 
 ### Seasonal results
 
-| Metric | Summer | Winter |
+| Measure | Summer | Winter |
 |---|---:|---:|
-| Shopping baskets | 252,474 | 246,965 |
+| Transactions | 252,474 | 246,965 |
 | Frequent itemsets | 985 | 564 |
 | Association rules | 8,904 | 2,382 |
 | Simple rules | 596 | 478 |
 
-The analysis identified:
+The comparison identified:
 
-- 224 rules found only in summer.
-- 106 rules found only in winter.
+- 224 simple rules found only in summer.
+- 106 simple rules found only in winter.
 
-### Examples of seasonal associations
+For example, the winter analysis identified a strong association between:
 
-**Summer:**
+**Bouillon à fondue (Fondue broth) → Fromage à raclette (Raclette cheese)**
 
-Charcoal → Sausages
-
-- Support: 14.38%
-- Confidence: 53.32%
-- Lift: 3.44
-
-**Winter:**
-
-Raclette cheese → Fondue broth
-
-- Support: 6.72%
-- Confidence: 55.19%
-- Lift: 6.81
-
-These examples illustrate how purchasing associations can differ between seasons.
-
-The absence of a rule from a seasonal result does not necessarily mean the association never occurs; it may simply fall below the selected support threshold.
-
-## 9. Recommendation Engine
-
-The selected recommendation rules are saved in:
-
-```text
-models/rules.json
-```
-
-The model metadata is saved in:
-
-```text
-models/metadata.json
-```
-
-### Exported model information
-
-| Description | Value |
+| Metric | Value |
 |---|---:|
-| Association rules | 215 |
-| Unique recommended products | 50 |
-| Total catalogue products | 98 |
-| Recommendation coverage | 51.02% |
-| Minimum support | 0.05 |
-| Minimum lift | 1.0 |
+| Support | 6.7248% |
+| Confidence | 82.9653% |
+| Lift | 6.808285 |
 
-Recommendation coverage represents the proportion of catalogue products that can appear as recommended products in the exported rules.
+This rule was identified in the winter analysis and not in the summer simple-rule results.
 
-The application loads the saved rules instead of running Apriori every time a customer changes their basket.
+A rule absent from one seasonal result may have fallen below the mining threshold; this does not necessarily mean that the two products were never purchased together.
 
-## 10. Streamlit Application
+The dataset covers only one calendar year, so the seasonal patterns should not be treated as proof of a permanent yearly trend.
 
-The interactive application allows customers to:
+### Recommendation
 
-- Browse the grocery product catalogue.
+The association rules should be reviewed and re-mined regularly. Monthly re-mining is a reasonable recommendation because customer purchasing patterns can change over time.
+
+Using year-round rules without checking their relevance could lead to less useful recommendations during specific seasons.
+
+## 9. Streamlit Recommendation Application
+
+The Streamlit application provides three main areas.
+
+### Zone 1 — Product Catalogue
+
+Users can:
+
+- Browse the 98 catalogue products.
 - Search for products.
-- Filter products by category.
-- Add products to a shopping basket.
-- View basket products, prices, and categories.
-- Remove products from the basket.
-- Clear the basket.
-- View the basket total.
-- Receive product recommendations based on basket contents.
-- View recommendation confidence and lift.
-- Understand why a product was recommended.
+- Filter by category.
+- View product categories and prices.
+- Add products to their shopping basket.
 
-### Recommendation logic
+### Zone 2 — Shopping Basket
 
-The application:
+Users can:
 
-1. Checks the products currently in the shopping basket.
-2. Finds rules whose antecedents are all present in the basket.
-3. Excludes products already in the basket.
-4. Keeps the strongest rule when multiple rules recommend the same product.
-5. Ranks recommendations by lift.
-6. Displays up to five recommendations with their metrics and explanations.
+- View selected products.
+- View categories, quantities, and prices.
+- See each product subtotal.
+- See the total basket price.
+- Remove a selected product.
+- Clear the entire basket.
 
-The application supports multi-product antecedents and explains the products that triggered each recommendation.
+### Zone 3 — Product Recommendations
 
-## 11. Edge Cases and Application Behavior
+The recommendation engine:
 
-The application is designed to handle several situations:
+- Loads the precomputed rules from `models/rules.json`.
+- Uses the metadata stored in `models/metadata.json`.
+- Checks whether all antecedent products are present in the basket.
+- Excludes products already in the basket.
+- Removes duplicate suggestions while keeping the rule with the highest lift.
+- Sorts recommendations by descending lift.
+- Displays up to five recommendations.
 
-| Situation | Expected behavior |
+Each recommendation includes the product name, category, price, support, confidence, lift, and a strength label.
+
+The application also provides plain-language explanations of the rules.
+
+The expandable **Rules that fired** section makes the recommendation process more transparent.
+
+**Important:** The Streamlit application does not run Apriori. Mining is completed beforehand, and the application uses the saved JSON model.
+
+## 10. Application Edge Cases
+
+The application was designed to handle the following situations:
+
+| Edge case | Expected application behavior |
 |---|---|
-| Empty basket | Displays a fallback message. |
-| No recommendation rule fires | Displays a fallback message. |
-| Recommended product already in basket | Excludes that product. |
-| Multiple rules recommend the same product | Keeps the strongest rule. |
-| Rare product has no matching rule | Explains that no recommendation is available. |
+| Empty basket | Displays a message and popular-product fallback recommendations. |
+| No rule matches | Explains that no association rule matched and displays popular alternatives. |
+| Product already in basket | Does not recommend a product that is already in the basket. |
+| Duplicate recommendations | Keeps the recommendation supported by the highest-lift rule. |
+| Rare product | Explains when the product's support is below the mining threshold. |
 
-These cases help make the recommendation engine more reliable and understandable.
+The application also supports rules with multiple products in the antecedent.
 
-## 12. How to Run the Application
+## 11. Benchmark and Performance Analysis
 
-### Step 1 — Open the project directory
+The benchmark compares the default Apriori mode with the low-memory mode at a support threshold of 0.05. It also measures low-memory performance at lower support thresholds.
 
-Open a terminal in the main project directory:
+Two memory measurements were recorded:
 
-```bash
-cd path/to/boreal-reco-Nermin
-```
+- **Sampled peak RSS:** Process memory measured periodically using psutil.
+- **Peak traced memory:** Python memory allocations measured using tracemalloc.
 
-### Step 2 — Install dependencies
+These measurements are different and should not be interpreted as interchangeable.
+
+### Benchmark results
+
+| Apriori mode | Support | Itemsets | Rules | Time (seconds) | Sampled peak RSS (MB) | Peak traced memory (MB) |
+|---|---:|---:|---:|---:|---:|---:|
+| Default | 0.05 | 191 | 370 | 38.89 | 7300.61 | 8689.47 |
+| Low memory | 0.05 | 191 | 370 | 3.98 | 263.26 | 217.93 |
+| Low memory | 0.02 | 658 | 3,746 | 7.49 | 322.65 | 262.34 |
+| Low memory | 0.01 | 2,267 | 16,096 | 18.58 | 321.70 | 262.31 |
+| Low memory | 0.005 | 7,106 | 63,662 | 51.72 | 323.58 | 262.32 |
+
+### Benchmark observations
+
+At a support threshold of 0.05, both modes produced the same 191 frequent itemsets and 370 association rules.
+
+The low-memory mode completed in 3.98 seconds, compared with 38.89 seconds for the default mode.
+
+The sampled peak RSS was also substantially lower with low-memory mode.
+
+As the minimum support threshold decreases, the number of frequent itemsets and association rules increases. This also increases the mining time.
+
+The default Apriori run completed successfully. No MemoryError occurred during the benchmark. The high measured memory usage nevertheless makes the low-memory option more practical for this dataset.
+
+The RSS measurement is sampled periodically and may miss short-lived peaks. Tracemalloc measures Python allocations and does not capture every native or NumPy allocation.
+
+For additional benchmark details, see `reports/benchmark.md`.
+
+## 12. Famous Retail Example: Beer and Diapers
+
+The famous Beer-and-Diapers retail example was checked against the actual transaction dataset rather than assumed to be true.
+
+The separate verification produced the following results:
+
+| Measure | Result |
+|---|---:|
+| Total baskets | 1,000,000 |
+| Baskets containing Beer | 150,468 |
+| Baskets containing Diapers | 83,966 |
+| Baskets containing both | 30,696 |
+| Support | 3.0696% |
+| Confidence (Beer → Diapers) | 20.4004% |
+| Confidence (Diapers → Beer) | 36.5577% |
+| Lift | 2.4296 |
+
+The lift of 2.4296 indicates that Beer and Diapers occur together approximately 2.43 times as often as would be expected if their purchases were independent.
+
+This demonstrates a positive association in this dataset. However, correlation or association does not prove causation. We cannot conclude that purchasing Beer causes a customer to purchase Diapers.
+
+**Mining threshold limitation:** The main Apriori analysis uses a minimum support of 5%. The Beer-and-Diapers pair has support of 3.0696%, so it does not appear in the saved recommendation rules. It was verified separately using the original transaction data.
+
+## 13. Ethical Considerations and Limitations
+
+### Explainability
+
+Recommendations are based on historical co-purchases. The application displays support, confidence, and lift so that users can understand why a product was recommended.
+
+The expandable Rules that fired section provides additional transparency.
+
+### Quebec Law 25 and privacy
+
+The project uses transaction data containing customer identifiers. In a real commercial deployment, customer information should be handled responsibly and protected.
+
+A production implementation should apply appropriate privacy safeguards, restrict access to personal information, minimize the data collected and retained, and assess its obligations under Quebec's Law 25 and applicable privacy legislation.
+
+The demonstration application does not need to display individual customer identities to generate product recommendations.
+
+### Reinforcement bias
+
+Frequently purchased products may continue to be recommended more often because they already appear frequently in historical transactions.
+
+This can reinforce existing purchasing patterns and reduce exposure to less common products.
+
+### Coverage limitation
+
+The saved recommendation model covers 50 of the 98 catalogue products, or approximately 51.02%.
+
+Some rare products do not meet the minimum support threshold and therefore may not participate in the saved rules.
+
+### Seasonal limitation
+
+The dataset contains only one year of transactions. Seasonal results may not represent long-term purchasing behavior.
+
+### Association is not causation
+
+Association rules identify patterns in historical purchases. They do not explain why customers buy products together and cannot establish causal relationships.
+
+## 14. Installation and Execution
+
+### Requirements
+
+The project dependencies are listed in `requirements.txt`.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 3 — Launch Streamlit
+### Run the mining notebook
+
+Open:
+
+```text
+notebooks/01_mining.ipynb
+```
+
+Ensure the course-provided transaction data is available in the `data/` directory before running the notebook.
+
+### Run the Streamlit application
+
+From the project root directory:
 
 ```bash
 streamlit run app/streamlit_app.py
 ```
 
-Streamlit will provide a local address in the terminal. Open that address in a web browser to use the application.
+The application loads the saved rules and metadata from the `models/` directory.
 
-### Required files
+Apriori does not run when the application starts.
 
-Before launching the application, make sure the following files are present:
+## 15. Screenshots
 
-- `data/products.csv`
-- `models/rules.json`
-- `models/metadata.json`
-- `app/streamlit_app.py`
-- `requirements.txt`
+The `screenshots/` directory contains 14 screenshots documenting the project, including:
 
-## 13. Limitations and Ethical Considerations
+- Product catalogue.
+- Shopping basket.
+- Product recommendations.
+- Rules that fired.
+- Empty-basket behavior.
+- No-matching-rule behavior.
+- Rare-product explanation.
+- Notebook data preparation.
+- Product frequency analysis.
+- Apriori benchmark comparison.
+- Top 10 association rules by lift.
+- Top 10 association rules by confidence.
+- Seasonal comparison.
+- Winter-only and summer-only rules.
 
-### Association does not mean causation
+These screenshots demonstrate the mining analysis, recommendation application, and its behavior in different scenarios.
 
-Association Rule Mining identifies products that frequently occur together. It does not prove that purchasing one product causes a customer to purchase another.
+## 16. Conclusion
 
-A famous retail example often discussed in data mining is the association between diapers and beer. Such associations illustrate patterns in purchasing behavior, not causal relationships.
+This project demonstrates how association rule mining can be used to discover purchasing patterns and build a grocery recommendation system.
 
-### Recommendation coverage
+The Apriori algorithm identified frequent product combinations, while support, confidence, and lift helped evaluate the usefulness of the resulting rules.
 
-The exported rules cover 50 of the 98 catalogue products.
+The seasonal analysis showed that associations can differ across periods. Benchmarking demonstrated the practical advantage of low-memory Apriori for this dataset.
 
-Products that do not appear as consequents in the selected rules cannot be recommended by this version of the engine.
+Finally, the Streamlit application uses precomputed rules to provide explainable recommendations without repeating the mining process.
 
-### Popularity and recommendation bias
-
-Frequently purchased products may appear in many association rules.
-
-This can create popularity bias, where common products receive more recommendation opportunities than less frequently purchased products.
-
-### Seasonal limitations
-
-The seasonal analysis uses the available 2026 dataset. The seasonal results should not automatically be interpreted as long-term purchasing trends.
-
-Additional years of data would help evaluate whether these patterns repeat.
-
-### Privacy and Quebec Law 25
-
-The project uses transaction and product data provided for the course.
-
-In a real commercial deployment, customer data should be handled responsibly, with appropriate privacy safeguards, access controls, and transparency in accordance with applicable privacy requirements, including Quebec's Law 25 where applicable.
-
-## 14. Reproducibility
-
-The project separates the mining process from the recommendation application.
-
-The Jupyter Notebook contains the data preparation, exploration, Apriori mining, association rule generation, and analysis.
-
-The exported JSON files allow the Streamlit application to load the selected recommendation rules and metadata without repeating the mining process.
-
-The dependency list is provided in `requirements.txt`.
-
-## 15. Conclusion
-
-Boréal Marché demonstrates how Association Rule Mining and the Apriori algorithm can be used to discover meaningful product relationships in grocery transactions.
-
-The project combines data exploration, frequent itemset mining, association rule evaluation, seasonal analysis, performance benchmarking, and an interactive recommendation application.
-
-By displaying recommendation metrics and explanations, the application provides a transparent way to explore product associations and support grocery shopping decisions.
-
----
-
-**Project:** Boréal Marché — Grocery Recommendation
+The project also highlights important limitations involving rare products, catalogue coverage, seasonal variation, privacy, reinforcement bias, and the difference between association and causation.
